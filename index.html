@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandreyGama - Portifólio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <header class="navbar">
+        <div class="navtitle">
+            <h1>
+                HandreyGama<span class="gama-dev">.dev</span>
+            </h1>
+        </div>
+           <ul class="nav-links">
+                    <li><a href="#inicio"> Inicio </a></li>
+                    <li><a href="#sobre"> Sobre mim </a></li>
+                    <li><a href="#projetos"> Projetos </a></li>
+                    <li><a href="#formacoes"> Formações</a></li>
+                    <li><a href="#tecnologias"> Tecnologias </a></li>
+                    <li><a href="#contatos"> Contatos </a></li>
+            </ul>
+    </header>
+    <section id="inicio" class="inicio">
+        <div class="inicio-container">
+            <div class="inicio-title">
+                <h1>
+                    Programador <span class="backend">Backend</span> 💻
+                </h1>
+            </div>
+            <p>Desenvolvedor Backend e estudante de Cybersegurança 🌐.</p>
+            <p>Construindo Soluções Inteligentes e transformando ideias em software funcional</p>
+        </div>
+    </section>
+    <section id="sobre" class="hero">
+        <h2 class="sobre-mim-title">
+            Sobre mim
+        </h2>
+      <div class="sobre-mim">
+        
+                <div class="sobre-mim-container">
+                    <h4> Quem sou eu?</h2>
+                    <p>
+                        Sou Handrey. Gosto de criar soluções de software 
+                        seguras, funcionais e escaláveis. sempre busco organização
+                        de projeto para garantir um workflow mais produtivo. 
+                    </p>
+                </div>
+                 <div class="sobre-mim-container">
+                    <h4> Com o que eu trabalho?</h2>
+                    <p>      
+                        Crio a lógica por tras das aplicações e sistema 
+                        regra de negócio, e a integração entre Backend e Frontend
+                        Como por exemplo: autenticação, criação de APIs e automações.
+                    </p>
+                </div>
+                 <div class="sobre-mim-container">
+                    <h4> Quem sou eu?</h2>
+                    <p>
+                        Sou Handrey. Gosto de criar soluções de software 
+                        seguras, funcionais e escaláveis. sempre busco organização
+                        de projeto para garantir um workflow mais produtivo. 
+                    </p>
+                </div>
+      </div>
+        <button class="ver-projetos">Ver Projetos</button>
+    </section>
+    <section id="projetos" class="projetos">
+        <div class="projetos-title">
+            <h2> Meus projetos </h2>
+        </div>
+        
+        <section class="projetos-carrossel">
+                  
+            <div class="projetos-container">
+                <div class="card">
+                    <h3> Genesis </h3>
+                    <p> Sistema feito com Python, html, css e javascript</p>
+                </div>
+                <div class="card">
+                    <h3> FinancePro </h3>
+                    <p> Sistema feito em Java com Javafx</p>
+
+                </div>
+            </div>
+        </section>
+   
+         
+    </section>
+     <section id="formacoes" class="formacoes">
+                <h1 class="formacoes-title">Minhas formações</h1>
+                <div class="formacoes-container">
+                    <div class="timeline-card left">
+                        <div class="card-formacoes">
+                            <h4>Udemy</h3>
+                            <p>Curso de python: Basico ao avançado</p>
+                            <span> 2024 </span>
+                        </div>
+                    </div>
+                    <div class="timeline-card right">
+                        <div class="card-formacoes">
+                            <h4>Alura</h3>
+                            <p>Curso de python Backend Completo</p>
+                            <span> 2026 - Atual </span>
+                        </div>
+                    </div>
+                    <div class="timeline-card left">
+                        <div class="card-formacoes">
+                            <h4>Ciências da Computação</h3>
+                            <p>UNIMA - Centro universitário de Maceio</p>
+                            <span> 2025 - Atual </span>
+                        </div>
+                    </div>
+                </div>
+
+          </section>
+    <section id="tecnologias" class="tecnologias-container">
+        <h1 class="tecnologias-title">Tecnologias</h1>
+        <section class="tecnologias">
+            
+            <div class="tecnologias-cards">
+                <h3> Python 🐍</h3>
+                <p> 
+                    Conhecimento em integração com banco de dados SQLite e MongoDB 
+                    Automações com selenium e BeautifulSoupe e criação de sites com  
+                    Flask e Django
+                </p>
+            </div>
+            <div class="tecnologias-cards">
+                <h3> Java ☕</h3>
+                <p> 
+                    Criação de aplicações web com Spring boot, Criação de apps para 
+                    Desktop com javafx e criação de apps para android com Android Studios. 
+                    
+                </p>
+            </div>
+
+        </section>
+    </section>
+    <section id="contatos">
+        <div class="contatos">
+            <ul class="contato-links">
+                <li><a href="https://github.com/HandreyGama"> Github</a></li>
+                <li><a href="#instagram"> Instagram</a></li>
+                <li><a href="#whatsapp"> Whatsapp</a></li>
+            </ul>
+        </div>
+    </section>
+         <script>
+            console.log("ola")
+            const cards = document.querySelectorAll(".card-formacoes");
+            const tecnologias_container = document.querySelectorAll(".tecnologias-container");
+            const sobre_mim = document.querySelectorAll(".sobre-mim")
+            const hero = document.querySelectorAll(".hero")
+            const projetos_title = document.querySelectorAll(".projetos-title")
+            const projetos_carrossel = document.querySelectorAll(".projetos-carrossel")
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("show");
+                    }
+
+                });
+            });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+            tecnologias_container.forEach(tecnologias_container => {
+                observer.observe(tecnologias_container);
+            });
+            sobre_mim.forEach(sobre_mim => {
+                observer.observe(sobre_mim);
+            });
+            hero.forEach(hero => {
+                observer.observe(hero);
+            });
+            projetos_title.forEach(projetos_title => {
+                observer.observe(projetos_title);
+            });
+            projetos_carrossel.forEach(projetos_carrossel => {
+                observer.observe(projetos_carrossel);
+            });
+            
+        </script>
+</body>
+</html>
