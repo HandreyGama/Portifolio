@@ -367,7 +367,7 @@ box-shadow: 0 0 10px #7c3aed;
 }
 .sobre-mim-container:hover {
     transform: translateY(-20px);
-}
+}   
 .sobre-mim.show{
     opacity: 1;
 }
