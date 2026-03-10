@@ -11,7 +11,9 @@
     --text-main: #ffffff;
     --text-secondary: #b3b3cc;
 }
-
+ul{
+    list-style-type: none;
+} 
 .navbar {
     left: 2rem;
     right: 2rem;
