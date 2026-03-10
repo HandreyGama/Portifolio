@@ -22,12 +22,51 @@
     padding: 1rem;
     box-shadow: 0 10px 25px rgba(124, 58, 237,0.4);
 }
+@keyframes gradientMove{
+
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+
+}
 body{
-    margin: 0;
+    margin: 1rem;
     background: linear-gradient(135deg,#0a0a0f,#0f0f1a,#111133);
     color: var(--text-main);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    background-size: 400% 400%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: none;
+    position: relative;
+    z-index: 1;
 }
+.cursor{
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    background: rgba(124,58,237,0.6);
+
+    position: fixed;
+
+    pointer-events: none;
+
+    filter: blur(60px);
+
+    transform: translate(-50%, -50%);
+}
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+}
+
 .navtitle{
     display: flex;
     align-items: center;
@@ -229,6 +268,7 @@ a{
 }
 section{
     padding:15rem 2rem;
+    
 }
 .inicio-container{
     background: rgba(255,255,255,0.03);
@@ -273,7 +313,52 @@ section{
     transition: all 3s ease;
    
 }
+.scroll-spy{
+
+position: fixed;
+
+left: 30px;
+top: 50%;
+
+transform: translateY(-50%);
+
+display: flex;
+flex-direction: column;
+
+gap: 15px;
+
+z-index: 1000;
+
+}
+
+.spy-dot{
+
+width: 12px;
+height: 12px;
+
+border-radius: 50%;
+
+background: rgba(255,255,255,0.3);
+
+transition: 0.3s;
+
+}
+
+.spy-dot.active{
+
+background: #7c3aed;
+
+transform: scale(1.4);
+
+box-shadow: 0 0 10px #7c3aed;
+
+}
 .sobre-mim-container{
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     background: linear-gradient(135deg,rgba(124, 58, 237,0.8),rgba(37, 99, 235,0.8));;
     border:1px solid rgba(255,255,255,0.05);
     border-radius: 12px;
@@ -347,14 +432,25 @@ section{
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        
+        
     }
+    
     .nav-links{
         display: flex;
         flex-direction: row;
         width: 100%;
         gap: 1rem;
+        flex-wrap: wrap;
     }
-
+    body{
+        overflow-x: hidden;
+    }
+    html{
+        overflow-x: hidden;    
+    }
+   
+ 
     .card{
         color: white;
         background: rgba(255,255,255,0.03);
@@ -385,6 +481,10 @@ section{
     .card p{
         font-size: 1rem;
     }
+    .sobre-mim{
+        display: flex;
+        flex-direction: column;
+    }
     .projetos-container{
         display: flex;
         flex-direction: column;
@@ -392,6 +492,10 @@ section{
         justify-content: center;
         gap:2rem;
         margin-top: 2rem;
+    }
+    .tecnologias{
+        display: flex;
+        flex-direction: column;
     }
     .projetos{
         display: flex;

@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HandreyGama - Portifólio</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body>
     
+    <div class="cursor"></div>
     <header class="navbar">
         <div class="navtitle">
             <h1>
@@ -23,6 +25,16 @@
                     <li><a href="#contatos"> Contatos </a></li>
             </ul>
     </header>
+    <div class="scroll-spy">
+
+    <div class="spy-dot" data-section="inicio"></div>
+    <div class="spy-dot" data-section="sobre"></div>
+    <div class="spy-dot" data-section="projetos"></div>
+    <div class="spy-dot" data-section="formacoes"></div>
+    <div class="spy-dot" data-section="tecnologias"></div>
+    <div class="spy-dot" data-section="contato"></div>
+
+    </div>
     <section id="inicio" class="inicio">
         <div class="inicio-container">
             <div class="inicio-title">
@@ -149,7 +161,79 @@
         </div>
     </section>
          <script>
+            tsParticles.load("particles-js", {
+
+            background: {
+            color: "transparent"
+            },
+
+            particles: {
+
+            number: {
+            value: 60
+            },
+
+            color: {
+            value: "#7c3aed"
+            },
+
+            links: {
+            enable: true,
+            color: "#7c3aed",
+            distance: 150,
+            opacity: 0.3
+            },
+
+            move: {
+            enable: true,
+            speed: 1
+            },
+
+            size: {
+            value: {min:1, max:3}
+            },
+
+            opacity:{
+            value:0.5
+            }
+
+            },
+
+            interactivity: {
+
+            events: {
+
+            onHover:{
+            enable:true,
+            mode:"grab"
+            }
+
+            },
+
+            modes:{
+
+            grab:{
+            distance:140
+            }
+
+            }
+
+            }
+
+            })
+         </script>
+         <script>
+            
+            const cursor = document.querySelector(".cursor")
+                document.addEventListener("mousemove",(e)=>{
+
+                cursor.style.left = e.clientX + "px"
+                cursor.style.top = e.clientY + "px"
+
+                })
             console.log("ola")
+            const sections = document.querySelectorAll("section")
+            const dots = document.querySelectorAll(".spy-dot")
             const cards = document.querySelectorAll(".card-formacoes");
             const tecnologias_container = document.querySelectorAll(".tecnologias-container");
             const sobre_mim = document.querySelectorAll(".sobre-mim")
@@ -160,11 +244,29 @@
                 entries.forEach(entry => {
                     
                     if(entry.isIntersecting){
+                        const id = entry.target.getAttribute("id")
                         entry.target.classList.add("show");
-                    }
+                        dots.forEach(dot=>{
 
-                });
+                        dot.classList.remove("active")
+
+                        if(dot.dataset.section === id){
+
+                        dot.classList.add("active")
+
+                        }
+
+                    })
+                    }
+                    
+                })
+                ;
+            },{
+            threshold:0.6
             });
+            sections.forEach(section=>{
+            observer.observe(section)
+            })
 
             cards.forEach(card => {
                 observer.observe(card);
@@ -187,4 +289,5 @@
             
         </script>
 </body>
+<div id="particles-js"></div>
 </html>
