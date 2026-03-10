@@ -13,9 +13,11 @@
 }
 
 .navbar {
+    margin: 2rem;
     background: rgba(255,255,255,0.03);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,7 +32,7 @@
 
 }
 body{
-    margin: 1rem;
+    margin: 0%;
     background: linear-gradient(135deg,#0a0a0f,#0f0f1a,#111133);
     color: var(--text-main);
     background-size: 400% 400%;
@@ -157,15 +159,16 @@ html{
 }
 .projetos-container{
     display: flex;
+    margin: 5px;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap:2rem;
-    margin-top: 2rem;
     padding: 2rem;
     box-shadow: 0 10px 25px rgba(124, 58, 237,0.4);
     
 }
 .projetos-carrossel{
     display: flex;
+    margin: 10px;
     opacity: 0;
     align-items: center;
     flex-direction: column;
@@ -422,7 +425,36 @@ box-shadow: 0 0 10px #7c3aed;
     opacity: 1;
     transform: translateY(0);
 }
-@keyframes fade-in{
+.contatos{
+
+    bottom: 0; /* Coloca na parte inferior */
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap:2rem;
+    justify-content: space-around; /* Distribui itens uniformemente */
+    align-items: center; /* Centraliza verticalmente */
+    
+    z-index: 1000; /* Garante que fique sobre tudo */
+}
+.contatos-section{
+    background: #0a0a0f;
+    margin: 0%;
+    padding: auto;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+.contato-links{
+    gap: 100rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 50rem; /* Espaço entre ícone e texto */
+}
+@keyframes fade-in{ 
     to{
         opacity: 1;
     }
@@ -455,12 +487,12 @@ box-shadow: 0 0 10px #7c3aed;
         color: white;
         background: rgba(255,255,255,0.03);
         border:1px solid rgba(255,255,255,0.05);
-        padding: 1.5rem;
         border-radius:12px;
         backdrop-filter: blur(8px);
         transition: 0.3s;
-        
-
+        min-width: 0;
+        flex-shrink: 0;
+        margin: 2px;
     
     }
     .contato-links{
@@ -474,6 +506,16 @@ box-shadow: 0 0 10px #7c3aed;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        position: fixed; /* Fixa a barra na tela */
+        bottom: 0; /* Coloca na parte inferior */
+        left: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around; /* Distribui itens uniformemente */
+        align-items: center; /* Centraliza verticalmente */
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        z-index: 1000; /* Garante que fique sobre tudo */
     }
     .card h3{
         font-size: 2rem;
@@ -491,11 +533,29 @@ box-shadow: 0 0 10px #7c3aed;
         align-items: center;
         justify-content: center;
         gap:2rem;
-        margin-top: 2rem;
+        margin:2px;
     }
     .tecnologias{
         display: flex;
         flex-direction: column;
+    }
+    .projetos-container{
+        display: flex;
+        margin: 2px;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap:2rem;
+        box-shadow: 0 10px 25px rgba(124, 58, 237,0.4);
+    
+    }
+    .projetos-carrossel{
+        display: flex;
+        margin: 10px;
+        opacity: 0;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        transition: all 3s ease;
     }
     .projetos{
         display: flex;
