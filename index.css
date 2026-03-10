@@ -236,7 +236,9 @@ html{
 .tecnologias-cards:hover{
     border-color: var(--primary);
     box-shadow: 0 10px 25px rgba(124, 58, 237,0.4);
+    transform: translateY(-10px);
 }
+
 .projetos-title{
     opacity: 0;
     text-decoration: underline;
@@ -432,7 +434,12 @@ box-shadow: 0 0 10px #7c3aed;
 .right .card-formacoes{
     margin-left: auto;
 }
-
+.right .card-formacoes:hover{
+   transform: translateY(-10px);
+}
+.left .card-formacoes:hover{
+   transform: translateY(-10px);
+}
 .card-formacoes.show {
     opacity: 1;
     transform: translateY(0);
