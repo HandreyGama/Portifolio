@@ -6,6 +6,7 @@
     <title>HandreyGama - Portifólio</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
     
@@ -39,7 +40,7 @@
         <div class="inicio-container">
             <div class="inicio-title">
                 <h1>
-                    Programador <span class="backend">Backend</span> 💻
+                     <span id="typing"> Programador <span  class="backend">Backend</span> 💻 </span>
                 </h1>
             </div>
             <p>Desenvolvedor Backend e estudante de Cybersegurança 🌐.</p>
@@ -223,7 +224,17 @@
             })
          </script>
          <script>
-            
+            var typing = new Typed("#typing",{
+                strings:[
+                    "Desenvolvedor de sistemas!"
+                    ,"Estudante de Ciências da Computação!"
+                    ,"Estudante de CyberSegurança!"
+                    ,"Apaixonado por Segurança e IA!"
+                ],
+                typeSpeed:140,
+                backSpeed:80,
+                loop:true
+            })
             const cursor = document.querySelector(".cursor")
                 document.addEventListener("mousemove",(e)=>{
 
