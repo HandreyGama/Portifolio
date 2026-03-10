@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 </head>
 <body>
     
@@ -36,9 +40,9 @@
     <div class="spy-dot" data-section="contato"></div>
 
     </div>
-    <section id="inicio" class="inicio">
-        <div class="inicio-container">
-            <div class="inicio-title">
+    <section  id="inicio" class="inicio">
+        <div  class="inicio-container">
+            <div  class="inicio-title">
                 <h1>
                      <span id="typing"> Programador <span  class="backend">Backend</span> 💻 </span>
                 </h1>
@@ -51,7 +55,7 @@
         <h2 class="sobre-mim-title">
             Sobre mim
         </h2>
-      <div class="sobre-mim">
+      <div data-aos="zoom-in" data-aos-delay="400" class="sobre-mim">
         
                 <div class="sobre-mim-container">
                     <h4> Quem sou eu?</h2>
@@ -81,11 +85,11 @@
         <button class="ver-projetos">Ver Projetos</button>
     </section>
     <section id="projetos" class="projetos">
-        <div class="projetos-title">
+        <div data-aos="fade-up" class="projetos-title">
             <h2> Meus projetos </h2>
         </div>
         
-        <section class="projetos-carrossel">
+        <section data-aos="slide-up" data-aos-delay="700" class="projetos-carrossel">
                   
             <div class="projetos-container">
                 <div class="card">
@@ -103,7 +107,7 @@
          
     </section>
      <section id="formacoes" class="formacoes">
-                <h1 class="formacoes-title">Minhas formações</h1>
+                <h1 data-aos="fade-right" class="formacoes-title">Minhas formações</h1>
                 <div class="formacoes-container">
                     <div class="timeline-card left">
                         <div class="card-formacoes">
@@ -130,8 +134,8 @@
 
           </section>
     <section id="tecnologias" class="tecnologias-container">
-        <h1 class="tecnologias-title">Tecnologias</h1>
-        <section class="tecnologias">
+        <h1 data-aos="zoom-in" class="tecnologias-title">Tecnologias</h1>
+        <section data-aos="zoom-in" data-aos-delay="400" class="tecnologias">
             
             <div class="tecnologias-cards">
                 <h3> Python 🐍</h3>
@@ -224,6 +228,15 @@
             })
          </script>
          <script>
+            const text = baffle(".sobre-mim-title")
+            text.set({
+                characters:"█▓▒░<>/░▒▓█",
+                speed:120
+            })
+            text.start()
+            text.reveal(20000)
+         </script>
+         <script>
             var typing = new Typed("#typing",{
                 strings:[
                     "Desenvolvedor de sistemas!"
@@ -243,6 +256,8 @@
 
                 })
             console.log("ola")
+        
+            AOS.init()
             const sections = document.querySelectorAll("section")
             const dots = document.querySelectorAll(".spy-dot")
             const cards = document.querySelectorAll(".card-formacoes");
