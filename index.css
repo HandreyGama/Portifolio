@@ -453,7 +453,7 @@ box-shadow: 0 0 10px #7c3aed;
     font-size: 14px;
     display: flex;
     align-items: center;
-    gap: 50rem; /* Espaço entre ícone e texto */
+    gap: 40rem; /* Espaço entre ícone e texto */
 }
 @keyframes fade-in{ 
     to{
