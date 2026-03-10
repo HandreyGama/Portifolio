@@ -14,6 +14,9 @@
 ul{
     list-style-type: none;
 } 
+.title{
+    font-size: 2rem;
+}
 .navbar {
     left: 2rem;
     right: 2rem;
