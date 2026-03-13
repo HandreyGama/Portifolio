@@ -607,6 +607,11 @@ box-shadow: 0 0 10px #7c3aed;
     .sobre-mim-container{
         height: 200px;
         width: 310px;
+        
+    }
+    .sobre-mim-container p {
+        font-size: 16px;
+        
     }
     .projetos-container{
         display: flex;
