@@ -322,6 +322,7 @@ section{
 .contato-links{
     background-color: #0a0a0f;
     display: flex;
+    padding: 0;
     justify-content: space-between;
     flex-direction: row;
 }
@@ -399,7 +400,7 @@ box-shadow: 0 0 10px #7c3aed;
     width: 100%;
     position: relative;
     margin: 40px 0;
-    
+    right: 1rem;
     
 }
 
