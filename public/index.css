@@ -706,8 +706,8 @@ transition: 0.3s;
         flex-wrap: nowrap;
         flex-direction: column;
     }
-    a{
-        font-size: 2ch;
+    .nav-links a{
+        font-size: 4ch;
     }
     .projetos-carrossel{
         display: flex;
