@@ -39,10 +39,18 @@ async function main(){
         const target = cards[currentIndex];
         if (!target) return 2;
 
-        target.scrollIntoView({
-            behavior: smooth ? 'smooth' : 'auto',
-            inline: 'center',
-            block: 'nearest'
+        // Calculate the position to center the target card in the container
+        const containerRect = container.getBoundingClientRect();
+        const targetRect = target.getBoundingClientRect();
+        const targetCenter = targetRect.left + targetRect.width / 2;
+        const containerCenter = containerRect.left + containerRect.width / 2;
+        const delta = targetCenter - containerCenter;
+        const newScrollLeft = container.scrollLeft + delta;
+
+        // Scroll the container only, not the whole page
+        container.scrollTo({
+            left: newScrollLeft,
+            behavior: smooth ? 'smooth' : 'auto'
         });
 
         if (activate) {
@@ -76,7 +84,8 @@ async function main(){
         }
     });
 
-    // Initial setup: mantenha o visual sem nenhum card ativo e sem scroll automático
+    // Initial setup: center the second card without activating it
+    scrollToCurrent(false, false);
     updateButtons();
 }
 main()
