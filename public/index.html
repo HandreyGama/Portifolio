@@ -302,7 +302,8 @@
                     }
                 });
         },{
-            threshold: 0.6
+            rootMargin: "-30% 0px -70% 0px",
+            threshold: 0
         });
             sections.forEach(section => {
                 spyObserver.observe(section);
@@ -318,7 +319,7 @@
                 })
                 ;
             },{
-            threshold:0.2
+            threshold:0.4
             });
             sections.forEach(section=>{
             observer.observe(section)

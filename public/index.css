@@ -651,7 +651,13 @@ transition: 0.3s;
     html{
         overflow-x: hidden;    
     }
- 
+    .tecnologias{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
     .card{
         color: white;
         background: rgba(255,255,255,0.03);
