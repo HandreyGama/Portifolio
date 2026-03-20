@@ -3,6 +3,7 @@ import { acessarMeusRepositorios } from "./api.js";
 
 async function main(){
     const repos = await acessarMeusRepositorios()
+    
     const reposFiltrados = repos.filter(repo => 
     !repo.fork &&
     !repo.private &&
@@ -36,7 +37,7 @@ async function main(){
     
     function scrollToCurrent(smooth = true, activate = false) {
         const target = cards[currentIndex];
-        if (!target) return;
+        if (!target) return 2;
 
         target.scrollIntoView({
             behavior: smooth ? 'smooth' : 'auto',
