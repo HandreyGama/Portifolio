@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <script type="module" src="./modules/render.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
     
     
@@ -59,7 +59,7 @@
     </section>
     <section id="sobre" class="hero">
         <h2 class="sobre-mim-title">
-            Sobre mim
+            Meu perfil
         </h2>
       <div data-aos="zoom-in" data-aos-delay="400" class="sobre-mim">
         
@@ -68,7 +68,7 @@
                     <p>
                         Sou Handrey. Trabalho criando soluções de software 
                         seguras, funcionais e escaláveis. buscando à organização
-                        de projeto para garantir um workflow mais produtivo. 
+                        de projeto para garantir console.log(result)um workflow mais produtivo. 
                     </p>
                 </div>
                  <div class="sobre-mim-container">
@@ -80,11 +80,11 @@
                     </p>
                 </div>
                  <div class="sobre-mim-container">
-                    <h2> Quem sou eu?</h2>
+                    <h2> Como trabalho?</h2>
                     <p>
-                        Sou Handrey. Gosto de criar soluções de software 
-                        seguras, funcionais e escaláveis. sempre busco organização
-                        de projeto para garantir um workflow mais produtivo. 
+                        Escolho trabalhar com metodologias ágeis, 
+                        Afim de tornar o desenvolvimento de sistemas mais eficiente. 
+                        proporcionando escalabilidade e segurança para os projetos.
                     </p>
                 </div>
       </div>
@@ -92,25 +92,17 @@
     </section>
     <section id="projetos" class="projetos">
         <div data-aos="fade-up" class="projetos-title">
-            <h2> Meus projetos </h2>
+            <h2> Projetos mais recentes </h2>
         </div>
         
         <section data-aos="slide-up" data-aos-delay="700" class="projetos-carrossel">
                   
+            <button class="carousel-btn left-btn">&lt;</button>
             <div class="projetos-container">
-                <div class="card">
-                    <h3> Genesis </h3>
-                    <p> Sistema feito com Python, html, css e javascript</p>
-                </div>
-                <div class="card">
-                    <h3> FinancePro </h3>
-                    <p> Sistema feito em Java com Javafx</p>
 
-                </div>
             </div>
+            <button class="carousel-btn right-btn">&gt;</button>
         </section>
-   
-         
     </section>
      <section id="formacoes" class="formacoes">
                 <h1 data-aos="fade-right" class="formacoes-title">Minhas formações</h1>
@@ -124,16 +116,23 @@
                     </div>
                     <div class="timeline-card right">
                         <div class="card-formacoes">
+                            <h4>Ciências da Computação</h3>
+                            <p>UNIMA - Centro universitário de Maceio</p>
+                            <span> 2025 - Atual </span>
+                        </div>
+                    </div>
+                    <div class="timeline-card left">
+                        <div class="card-formacoes">
                             <h4>Alura</h3>
                             <p>Curso de python Backend Completo</p>
                             <span> 2026 - Atual </span>
                         </div>
                     </div>
-                    <div class="timeline-card left">
+                    <div class="timeline-card right">
                         <div class="card-formacoes">
-                            <h4>Ciências da Computação</h3>
-                            <p>UNIMA - Centro universitário de Maceio</p>
-                            <span> 2025 - Atual </span>
+                            <h4>Curso Hackers do Bem</h3>
+                            <p>Curso de segurança da informação online</p>
+                            <span> 2026 - Atual </span>
                         </div>
                     </div>
                 </div>
@@ -159,7 +158,21 @@
                     
                 </p>
             </div>
-
+            <div class="tecnologias-cards">
+                <h3> MySQL🛢 ☕</h3>
+                <p> 
+                    Conhecimento em modelagem de banco de dados relacional, criação de 
+                    consultas SQL e integração com aplicações backend. 
+                    
+                </p>
+            </div>
+            <div class="tecnologias-cards">
+                <h3> JavaScript｡🇯‌🇸‌</h3>
+                <p> 
+                    Conhecimento em criação de sites, integração com APIs e 
+                    automações com NodeJS.
+                </p>
+            </div>
         </section>
     </section>
     <section id="contatos" class="contatos-section">
@@ -235,6 +248,8 @@
             })
          </script>
          <script>
+            const container = document.querySelector('.projetos-container');
+            
             const text = baffle(".sobre-mim-title")
             text.set({
                 characters:"█▓▒░<>/░▒▓█",
@@ -263,7 +278,6 @@
 
                 })
             console.log("ola")
-        
             AOS.init()
             const sections = document.querySelectorAll("section")
             const dots = document.querySelectorAll(".spy-dot")
@@ -273,29 +287,38 @@
             const hero = document.querySelectorAll(".hero")
             const projetos_title = document.querySelectorAll(".projetos-title")
             const projetos_carrossel = document.querySelectorAll(".projetos-carrossel")
+            const spyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        const id = entry.target.getAttribute("id");
+
+                        dots.forEach(dot => {
+                            dot.classList.remove("active");
+
+                            if(dot.dataset.section === id){
+                                dot.classList.add("active");
+                            }
+                        });
+                    }
+                });
+        },{
+            threshold: 0.6
+        });
+            sections.forEach(section => {
+                spyObserver.observe(section);
+            });
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     
                     if(entry.isIntersecting){
                         const id = entry.target.getAttribute("id")
                         entry.target.classList.add("show");
-                        dots.forEach(dot=>{
-
-                        dot.classList.remove("active")
-
-                        if(dot.dataset.section === id){
-
-                        dot.classList.add("active")
-
-                        }
-
-                    })
                     }
                     
                 })
                 ;
             },{
-            threshold:0.6
+            threshold:0.2
             });
             sections.forEach(section=>{
             observer.observe(section)
