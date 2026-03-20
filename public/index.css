@@ -603,6 +603,9 @@ transition: 0.3s;
     h3{
         font-size: 20px;
     }
+    p{
+        font-size: 16px;
+    }
     .card-formacoes{
         width: 100%;
         padding: 20px;
@@ -703,7 +706,9 @@ transition: 0.3s;
         flex-wrap: nowrap;
         flex-direction: column;
     }
-
+    a{
+        font-size: 2ch;
+    }
     .projetos-carrossel{
         display: flex;
         justify-content: center;
