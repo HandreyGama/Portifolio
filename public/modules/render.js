@@ -22,7 +22,8 @@ async function main(){
         });
         projetoCard.innerHTML = `
                         <h3> ${element.name} </h3>
-                        <p> ${element.description} </p>`
+                        <p> ${element.description} </p>
+                        <h4> Clique para ver mais </h4>`
         projetosContainer.appendChild(projetoCard)
     });
 
