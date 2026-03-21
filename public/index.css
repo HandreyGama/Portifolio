@@ -402,6 +402,9 @@ section{
     transition: all 3s ease;
    
 }
+.sobre-mim-container h2{
+    font-size: 2rem;
+}
 .scroll-spy{
 
 position: fixed;
@@ -446,6 +449,7 @@ transition: 0.3s;
 .sobre-mim-container{
     display: flex;
     height: 300px;
+    width: 80%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
