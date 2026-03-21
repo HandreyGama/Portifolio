@@ -449,7 +449,7 @@ transition: 0.3s;
 .sobre-mim-container{
     display: flex;
     height: 300px;
-    width: 80%;
+    width: 90%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
