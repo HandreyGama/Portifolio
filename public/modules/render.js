@@ -5,7 +5,6 @@ async function main(){
     const repos = await acessarMeusRepositorios()
     
     const reposFiltrados = repos.filter(repo => 
-    !repo.fork &&
     !repo.private &&
     repo.description !== null
 );

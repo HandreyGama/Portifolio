@@ -8,6 +8,6 @@ export async function acessarMeuPerfil(){
     return acessarAPIGithub(GITHUB_USER_ENDPOINT)
 }
 export async function acessarMeusRepositorios(){
-    const result = await acessarAPIGithub(GITHUB_USER_ENDPOINT + "/repos?&direction=desc&per_page=10")
+    const result = await acessarAPIGithub(GITHUB_USER_ENDPOINT + "/repos?sort=created&direction=desc&per_page=10")
     return result
 }
