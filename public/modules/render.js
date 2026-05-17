@@ -22,7 +22,7 @@ async function main(){
                             <div class="bola-pulsante"></div>
                         </div>
                         <p> ${element.description} </p>
-                        <button href="${element.html_url}" class="card-button"> Clique para ver mais </button>
+                        <button class="card-button"> <a href="${element.html_url}">Clique para ver mais</a></button>
                         `
         projetosContainer.appendChild(projetoCard)
     });
