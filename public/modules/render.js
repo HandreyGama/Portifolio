@@ -15,9 +15,6 @@ async function main(){
         const projetoCard = document.createElement("div")
         console.log(element.name, element.fork)
         projetoCard.classList.add("card")
-        projetoCard.addEventListener("click", () => {
-            window.open(element.html_url, "_blank");
-        });
         projetoCard.innerHTML = `
                         <h3> ${element.name} </h3>
                         <div class="tag">
