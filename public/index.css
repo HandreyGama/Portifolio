@@ -478,6 +478,7 @@ transition: 0.3s;
     height: 30px;
     align-items: center;
     justify-content: center;
+    gap: 4px;
 }
 .sobre-mim-container:hover {
     transform: translateY(-20px);
@@ -497,8 +498,24 @@ transition: 0.3s;
     right: 1rem;
     
 }
-
-
+#bola-pulsante{
+    width: 5px;
+    height: 5px;
+    background:#14ff08ab;
+    border-radius:100%;
+}
+.card-button{
+    border-radius: 20px;
+    background-color:#ffffff2d;
+    height: 6vh;
+    border: 1px solid #dadadacc;
+    color: white;
+    transition: all ease-in-out 300ms;
+}
+.card-button:hover{
+    transform: scale(1.15);
+    cursor:pointer;
+}
 .formacoes-container::after{
     content: "";
     position: absolute;
