@@ -22,10 +22,9 @@ async function main(){
                         <h3> ${element.name} </h3>
                         <div class="tag">
                             <span>Concluido</span>
-                            <div id="bola-pulsante"></div>
+                            <div class="bola-pulsante"></div>
                         </div>
                         <p> ${element.description} </p>
-                        <h4> Clique para ver mais </h4>
                         <button href="${element.html_url}" class="card-button"> Clique para ver mais </button>
                         `
         projetosContainer.appendChild(projetoCard)
