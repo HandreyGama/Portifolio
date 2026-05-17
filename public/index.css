@@ -51,7 +51,7 @@ body{
 }
 #avatar-img{
     border-radius: 100%;
-    border: 1px solid #7c3aed;
+    border: 3px solid #7c3aed;
     width: 256px;
 }
 .cursor{
