@@ -21,6 +21,9 @@ async function main(){
         });
         projetoCard.innerHTML = `
                         <h3> ${element.name} </h3>
+                        <div class="tag">
+                            <span>Concluido</span>
+                        </div>
                         <p> ${element.description} </p>
                         <h4> Clique para ver mais </h4>`
         projetosContainer.appendChild(projetoCard)

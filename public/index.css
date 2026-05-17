@@ -51,6 +51,11 @@ body{
     position: relative;
     z-index: 1;
 }
+#avatar-img{
+    border-radius: 100%;
+    border: 1px solid #7c3aed;
+    width: 256px;
+}
 .cursor{
     width: 200px;
     height: 200px;
@@ -236,6 +241,7 @@ html{
 
 .card{
     color: white;
+    display: flex;
     background: rgba(255,255,255,0.03);
     border:1px solid rgba(255,255,255,0.05);
     padding: 1.5rem;
@@ -244,6 +250,9 @@ html{
     transition: 0.3s;
     min-width: 100%;
     min-height: 200px;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
     margin-top: 20px;
 }
 .card.active {
@@ -453,11 +462,22 @@ transition: 0.3s;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg,rgba(124, 58, 237,0.8),rgba(37, 99, 235,0.8));;
+    background: linear-gradient(135deg,rgba(124, 58, 237, 0.642),rgba(37, 100, 235, 0.299));;
     border:1px solid rgba(255,255,255,0.05);
     border-radius: 12px;
     transition: all 1s;
     box-shadow: 0 10px 25px rgba(124, 58, 237,0.4);
+}
+.tag{
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #14ff08;
+    margin: 10px;
+    background-color: rgba(7, 240, 7, 0.087);
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
 }
 .sobre-mim-container:hover {
     transform: translateY(-20px);
