@@ -132,7 +132,7 @@ body{
 }
 .sobre-mim-title{
     padding: 40px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .nav-links a:hover::after{
     transform: scaleX(1); /* Linha aparece */
@@ -325,15 +325,15 @@ html{
 
 .projetos-title{
     opacity: 0;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .formacoes-title{
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .tecnologias-title{
     padding: 20px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .projetos-title.show{
     opacity: 1;
