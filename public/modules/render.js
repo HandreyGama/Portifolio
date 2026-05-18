@@ -3,29 +3,42 @@ import { acessarMeusRepositorios } from "./api.js";
 
 async function main(){
     const repos = await acessarMeusRepositorios()
-    
+
     const reposFiltrados = repos.filter(repo => 
     !repo.private &&
     repo.description !== null
+    
 );
+
     const projetosContainer = document.querySelector(".projetos-container")
     console.log("* to aqui!!")
     
-    reposFiltrados.forEach(element => {
+    for (const element of reposFiltrados) { 
         const projetoCard = document.createElement("div")
         console.log(element.name, element.fork)
         projetoCard.classList.add("card")
         projetoCard.innerHTML = `
                         <h3> ${element.name} </h3>
-                        <div class="tag">
-                            <span>Concluido</span>
-                            <div class="bola-pulsante"></div>
+                        <div class="tags">
+                            <div class="tag">
+                                <span>Concluido</span>
+                                <div class="bola-pulsante">
+                                </div>
+                            </div>    
+                            <div class="linguagem-tags"> 
+                                <div class="linguagem-tag"> 
+                                    ${element.language ?? "Sem Linguagem"} 
+                                </div>    
+                            </div>            
+                        </div>
+                        
+                        <div >
                         </div>
                         <p> ${element.description} </p>
                         <button class="card-button"> <a class="projects-links" href="${element.html_url}">Clique para ver mais</a></button>
                         `
         projetosContainer.appendChild(projetoCard)
-    });
+    };
 
     // Carousel functionality
     const container = document.querySelector('.projetos-container');

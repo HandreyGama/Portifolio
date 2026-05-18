@@ -331,6 +331,28 @@ html{
     text-align: center;
     text-decoration: none;
 }
+.linguagem-tags{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.tags{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items:center;
+}
+.linguagem-tag{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color:#2331f458;
+    border-radius: 20px;
+    padding: 5px;
+    border: 1px solid rgba(0, 162, 255, 0.703);
+    width: 130px;
+    height: 30px;
+}
 .tecnologias-title{
     padding: 20px;
     text-decoration: none;
