@@ -564,7 +564,7 @@ transition: 0.3s;
 
 .card-button{
     border-radius: 20px;
-    background-color:#ffffff2d;
+    background-color:transparent;
     height: 6vh;
     border: 1px solid #dadadacc;
     color: white;
