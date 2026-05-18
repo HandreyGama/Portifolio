@@ -17,13 +17,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="module" src="./modules/render.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 </head>
 <body>
-    
-    <div class="cursor"></div>
-    <header class="navbar">
+    <script>window.scrollTo(0,0)</script>    
+    <div class="cursor">
+
+    </div>
+        <div class="cursor-icon"></div>
+    <header class="navbar active">
         <div class="navtitle">
             <h1 class="title">
                 HandreyGama<span class="gama-dev">.dev</span>
@@ -57,7 +60,12 @@
             </div>
             <p>Desenvolvedor Backend e estudante de Cybersegurança 🌐.</p>
             <p>Construindo Soluções Inteligentes e transformando ideias em software funcional</p>
-            <button type="button" class="btn btn-outline-light"><a style="text-decoration: none; color:rgb(178, 179, 179) ;" href="#sobre">Clique para saber mais</a></button>
+            <button type="button" class="btn btn-outline-light"><a style="text-decoration: none; color:rgb(178, 179, 179) ;" href="#sobre">
+                Clique para saber mais
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                </svg> 
+            </a></button>
         </div>
     </section>
     <section id="sobre" class="hero">
@@ -164,24 +172,22 @@
         <section data-aos="zoom-in" data-aos-delay="400" class="tecnologias">
             
             <div class="tecnologias-cards">
-                <h3> Python 🐍</h3>
+                <h3> Python <i class="devicon-python-plain colored"></i> </h3>
                 <p> 
                     Conhecimento em integração com banco de dados SQLite, MySQL e MongoDB 
                     Automações com selenium e BeautifulSoupe e criação de sites com  
-                    Flask e Django
+                    Flask e Django, e criação de APIs RESTFUL com FASTAPI
                 </p>
             </div>
             <div class="tecnologias-cards">
-                <h3> Java ☕</h3>
+                <h3> Java <i class="devicon-java-plain colored"></i></h3>
                 <p> 
-                    Criação de aplicações web com Spring boot, Criação de apps para 
-                    Desktop com javafx e criação de apps para android com Android Studios. 
-                    
+                    Criação de apps para Desktop com javafx e criação de apps para android com Android Studios. 
                 </p>
             </div> 
 
             <div class="tecnologias-cards">
-                <h3> Banco de dados 🛢 </h3>
+                <h3> Banco de dados <i class="fa-solid fa-database"></i> </h3>
                 <p> 
                     Conhecimento em modelagem de banco de dados relacional e não-relaciona.
                     criação de consultas SQL e integração com aplicações backend com MySQL,
@@ -190,18 +196,26 @@
                 </p>
             </div>
             <div class="tecnologias-cards">
-                <h3> JavaScript 🇯‌🇸‌</h3>
+                <h3> JavaScript <i class="devicon-javascript-plain colored"></i></h3>
                 <p> 
-                    Conhecimento em criação de sites, integração com APIs e 
+                    Conhecimento em criação de sites com html, css e bootstrap. e integração com APIs e 
                     automações com NodeJS.
                 </p>
             </div>
             <div class="tecnologias-cards">
-                <h3> Linux 🐧</h3>
+                <h3> Linux <i class="devicon-linux-plain linux-icon"></i></h3>
                 <p> 
                     Conhecimento de gerenciamento de processos,
                     Usuarios, sistema de arquivos, configurações
                     de rede e criação de servidores https com apache
+
+                </p>
+            </div>
+            <div class="tecnologias-cards">
+                <h3> Github <i class="devicon-github-original"></i></h3>
+                <p> 
+                    Conhecimentos de Gitflow, gerenciamento de projetos
+                    com git e github.
 
                 </p>
             </div>
@@ -291,6 +305,7 @@
             text.reveal(20000)
          </script>
          <script>
+       
             var typing = new Typed("#typing",{
                 strings:[
                     "Desenvolvedor de sistemas!"
@@ -303,12 +318,29 @@
                 loop:true
             })
             const cursor = document.querySelector(".cursor")
+            const cursor_icon = document.querySelector(".cursor-icon")
                 document.addEventListener("mousemove",(e)=>{
 
                 cursor.style.left = e.clientX + "px"
                 cursor.style.top = e.clientY + "px"
+                cursor_icon.style.left = e.clientX + "px"
+                cursor_icon.style.top = e.clientY + "px"
 
                 })
+
+            document.addEventListener("DOMContentLoaded",() =>{
+
+                const navbar = document.querySelector(".navbar")    
+                window.addEventListener("scroll",() =>{
+                    if(window.scrollY === 0){
+                        navbar.classList.add("active")
+                    }
+                    else{
+                        navbar.classList.remove("active")
+                    }
+                })    
+            })    
+
             console.log("ola")
             AOS.init()
             const sections = document.querySelectorAll("section")

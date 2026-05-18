@@ -29,6 +29,22 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all ease-in-out 300ms;
+    padding: 1rem;
+}
+.navbar.active{
+    left: 0rem;
+    right: 0rem;
+    position: fixed;
+    z-index: 10000;
+    background: rgba(2, 1, 4, 0.304);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(29, 29, 29, 0.792);
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease-in-out 300ms;
     padding: 1rem;
 }
 @keyframes gradientMove{
@@ -48,6 +64,7 @@ body{
     font-family: "Inconsolata" ,monospace;
     position: relative;
     z-index: 1;
+    cursor: none;
 }
 .projects-links{
     text-decoration: none;
@@ -59,6 +76,7 @@ body{
     border: 3px solid #7c3aed;
     width: 256px;
 }
+
 .cursor{
     width: 200px;
     height: 200px;
@@ -74,6 +92,17 @@ body{
     filter: blur(60px);
 
     transform: translate(-50%, -50%);
+}
+.cursor-icon{
+    background: transparent;
+    border-radius: 100%;
+    border: 1px solid #7c3aed;
+    width: 30px;
+    position: fixed;
+    pointer-events: none;
+    height: 30px;
+    transform: translate(-50%, -50%);   
+    z-index: 10;
 }
 #particles-js{
     position: fixed;
@@ -769,8 +798,8 @@ transition: 0.3s;
         backdrop-filter: blur(8px);
         transition: 0.3s;
         min-width: 250px;
-        max-width: 250px;
-        height: 200px;
+        max-width: 320px;
+        height: 350px;
         flex-shrink: 0;
         margin: 2px;
         
