@@ -21,7 +21,7 @@ ul{
     left: 2rem;
     right: 2rem;
     position: fixed;
-    z-index: 10000;
+    z-index: 8;
     background: rgba(2, 1, 4, 0.304);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(29, 29, 29, 0.792);
@@ -36,7 +36,7 @@ ul{
     left: 0rem;
     right: 0rem;
     position: fixed;
-    z-index: 10000;
+    z-index: 8;
     background: rgba(2, 1, 4, 0.304);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(29, 29, 29, 0.792);
@@ -102,7 +102,7 @@ body{
     pointer-events: none;
     height: 30px;
     transform: translate(-50%, -50%);   
-    z-index: 10;
+    z-index: 20;
 }
 #particles-js{
     position: fixed;
