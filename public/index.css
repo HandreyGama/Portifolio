@@ -11,6 +11,16 @@
     --text-main: #ffffff;
     --text-secondary: #b3b3cc;
 }
+::selection {
+  background-color: #a007ff; /* Cor de fundo da seleção */
+  color: #ffffff;             /* Cor do texto selecionado */
+}
+
+/* Para navegadores Firefox (precisa do prefixo -moz-) */
+::-moz-selection {
+  background-color: #a007ff;
+  color: #ffffff;
+}
 ul{
     list-style-type: none;
 } 
