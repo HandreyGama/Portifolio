@@ -1,4 +1,5 @@
 #  Portfólio - Handrey Gama
+<img width="1896" height="886" alt="image" src="https://github.com/user-attachments/assets/5deaa30d-8d0c-47b3-9add-e5b8edc696c8" />
 
 🔗 **Acesse o projeto online:**  
 👉 https://handreygamaportifolio.vercel.app/
@@ -83,6 +84,8 @@ Elementos aparecem conforme o usuário navega pela página.
 ---
 
 ##  Demonstração
+<img width="1895" height="908" alt="image" src="https://github.com/user-attachments/assets/44339f2a-e5f5-4368-9404-5d327e3e4937" />
+<img width="1897" height="880" alt="image" src="https://github.com/user-attachments/assets/3016091c-e827-4a48-8798-a9fa8bd64d22" />
 
 
 ---
