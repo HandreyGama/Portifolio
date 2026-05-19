@@ -10,14 +10,20 @@ async function main(){
     
 );
 
-    const projetosContainer = document.querySelector(".projetos-container")
-    console.log("* to aqui!!")
-    
+    const projetosContainer = document.querySelector(".glide__slides")
+    const bulletsContainer = document.querySelector(".glide__bullets")
+    let i = 0
     for (const element of reposFiltrados) { 
-        const projetoCard = document.createElement("div")
+        const projetoCard = document.createElement("li")
+        const bullet = document.createElement("button")
+        bullet.dataset.glideDir = `=${i}`
+        i += 1
+        bullet.classList.add("glide__bullet")
+
         console.log(element.name, element.fork)
-        projetoCard.classList.add("card")
+        projetoCard.classList.add("glide__slide")
         projetoCard.innerHTML = `
+                    <div class="card">    
                         <h3> ${element.name} </h3>
                         <div class="tags">
                             <div class="tag">
@@ -36,70 +42,44 @@ async function main(){
                         </div>
                         <p> ${element.description} </p>
                         <button class="card-button"> <a class="projects-links" href="${element.html_url}">Clique para ver mais</a></button>
+                    </div>    
                         `
         projetosContainer.appendChild(projetoCard)
+        bulletsContainer.appendChild(bullet)
+        
     };
+    i = 0
+    new Glide('.glide', {
+        type: 'carousel',
+        perView: 3,
+        focusAt: 'center',
+        gap: 300,
+        autoplay: 3000,
 
-    // Carousel functionality
-    const container = document.querySelector('.projetos-container');
-    const cards = document.querySelectorAll('.card');
-    const leftBtn = document.querySelector('.left-btn');
-    const rightBtn = document.querySelector('.right-btn');
-    
-    // Start centering on the second card (index 1), but no active class until button click
-    let currentIndex = Math.min(1, cards.length - 1);
-    
-    function scrollToCurrent(smooth = true, activate = false) {
-        const target = cards[currentIndex];
-        if (!target) return 2;
+        peek: {
+            before: 100,
+            after: 100
+        },
 
-        // Calculate the position to center the target card in the container
-        const containerRect = container.getBoundingClientRect();
-        const targetRect = target.getBoundingClientRect();
-        const targetCenter = targetRect.left + targetRect.width / 2;
-        const containerCenter = containerRect.left + containerRect.width / 2;
-        const delta = targetCenter - containerCenter;
-        const newScrollLeft = container.scrollLeft + delta;
-
-        // Scroll the container only, not the whole page
-        container.scrollTo({
-            left: newScrollLeft,
-            behavior: smooth ? 'smooth' : 'auto'
-        });
-
-        if (activate) {
-            const isMobile = window.matchMedia('(max-width: 768px)').matches;
-            cards.forEach((card, idx) => {
-                if (!isMobile) {
-                    card.classList.toggle('active', idx === currentIndex);
+        breakpoints: {
+            1200: {
+                perView: 2,
+                gap: 30,
+                peek: {
+                    before: 50,
+                    after: 50
                 }
-            });
+            },
+
+            768: {
+                perView: 1,
+                gap: 20,
+                peek: {
+                    before: 30,
+                    after: 30
+                }
+            }
         }
-    }
-
-    function updateButtons() {
-        leftBtn.disabled = currentIndex <= 0;
-        rightBtn.disabled = currentIndex >= cards.length - 1;
-    }
-
-    rightBtn.addEventListener('click', () => {
-        if (currentIndex < cards.length - 1) {
-            currentIndex++;
-            scrollToCurrent(true, true);
-            updateButtons();
-        }
-    });
-
-    leftBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            scrollToCurrent(true, true);
-            updateButtons();
-        }
-    });
-
-    // Initial setup: center the second card without activating it
-    scrollToCurrent(false, false);
-    updateButtons();
+    }).mount()
 }
 main()

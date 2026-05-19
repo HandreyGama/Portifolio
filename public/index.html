@@ -18,7 +18,9 @@
     <script type="module" src="./modules/render.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </head>
 <body>
     <script>window.scrollTo(0,0)</script>    
@@ -107,13 +109,21 @@
             <h2> Projetos mais recentes </h2>
         </div>
         
-        <section data-aos="slide-up" data-aos-delay="700" class="projetos-carrossel">
-                  
-            <button class="carousel-btn left-btn">&lt;</button>
-            <div class="projetos-container">
+        <section data-aos="slide-up" data-aos-delay="700" class="projetos-carrossel glide">
+            
+            <div class="glide__arrows" data-glide-el="controls">
+                
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><<</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">>></button>
+            </div>            
+            <div class=" glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
 
+                    </ul>
             </div>
-            <button class="carousel-btn right-btn">&gt;</button>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+            </div>
+            
         </section>
     </section>
      <section id="formacoes" class="formacoes">
