@@ -714,6 +714,7 @@ transition: 0.3s;
 @media (max-width: 1200px){
     .navbar{
         align-items: center;
+        justify-content: center;
         height: auto;
         gap: 1rem;
         left: 2rem;
@@ -723,6 +724,7 @@ transition: 0.3s;
     }
     .navbar.active{
         align-items: center;
+        justify-content: center;
         height: 200px;
         gap: 1rem;
         left: 0rem;
