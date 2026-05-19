@@ -794,6 +794,9 @@ transition: 0.3s;
         gap:20px;
 
     }
+    .tecnologias-cards{
+        width: auto;
+    }
     .nav-links{
         display: flex;
         flex-direction: row;
