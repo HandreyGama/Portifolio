@@ -87,20 +87,3 @@ Elementos aparecem conforme o usuário navega pela página.
 <img width="1895" height="908" alt="image" src="https://github.com/user-attachments/assets/44339f2a-e5f5-4368-9404-5d327e3e4937" />
 <img width="1897" height="880" alt="image" src="https://github.com/user-attachments/assets/3016091c-e827-4a48-8798-a9fa8bd64d22" />
 
-
----
-
-## 🛠 Como rodar localmente
-
-```bash
-# clonar o projeto
-git clone https://github.com/HandreyGama/Portifolio.git
-
-# entrar na pasta
-cd seu-repo
-
-# instalar dependências
-npm install
-
-# rodar servidor
-node app.js
