@@ -333,21 +333,21 @@ html{
     text-align: center;
 }
 .tecnologias{
-    
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-columns: repeat(3, 1fr); /* 2 colunas */
     align-items: center;
     justify-content: center;
     margin:0px;
     padding: 0px;
     gap: 2rem;
-    width: 100%; /* IMPORTANTE */
+    width: 100%;
     
 }
 .tecnologias-cards{
     display: flex;
     flex-direction: column;
+    width: 30vw;
     min-height: 200px;
     background: rgba(255,255,255,0.03);
     border:1px solid rgba(255,255,255,0.05);
@@ -401,7 +401,6 @@ html{
     opacity: 1;
 }
 .tecnologias-container{
-    
     align-items: center;
     text-align: center;
     justify-content: center;
