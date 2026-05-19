@@ -1,11 +1,11 @@
-# 🚀 Portfólio - Handrey Gama
+#  Portfólio - Handrey Gama
 
 🔗 **Acesse o projeto online:**  
 👉 https://handreygamaportifolio.vercel.app/
 
 ---
 
-## 📖 Sobre o projeto
+##  Sobre o projeto
 
 Este é meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos, formações e tecnologias que utilizo no dia a dia como desenvolvedor.
 
@@ -13,22 +13,22 @@ O objetivo do projeto é criar uma experiência interativa e moderna, mostrando 
 
 ---
 
-## ✨ Features
+##  Features
 
-- 💻 Interface moderna com tema dark
-- 🎯 Navegação com scroll spy (indicador de seção ativa)
-- 📦 Carrossel de projetos dinâmico
-- 🔥 Animações suaves com AOS (Animate On Scroll)
-- ✨ Efeito de digitação com Typed.js
-- 🎭 Efeito de texto criptografado com Baffle.js
-- 🌌 Fundo interativo com tsParticles
-- 🖱️ Cursor customizado animado
-- 🔗 Integração com API do GitHub (lista automática de repositórios)
-- 📱 Layout responsivo
+-  Interface moderna com tema dark
+-  Navegação com scroll spy (indicador de seção ativa)
+-  Carrossel de projetos dinâmico
+- Animações suaves com AOS (Animate On Scroll)
+-  Efeito de digitação com Typed.js
+-  Efeito de texto criptografado com Baffle.js
+-  Fundo interativo com tsParticles
+- 🖱 Cursor customizado animado
+-  Integração com API do GitHub (lista automática de repositórios)
+-  Layout responsivo
 
 ---
 
-## 🧠 Stack utilizada
+##  Stack utilizada
 
 ### Frontend
 - HTML5
@@ -37,13 +37,13 @@ O objetivo do projeto é criar uma experiência interativa e moderna, mostrando 
 - Bootstrap 5.3
 
 ### Bibliotecas e ferramentas
-- 🎨 [Bootstrap](https://getbootstrap.com/) — estilização e componentes responsivos
-- ✨ [AOS](https://michalsnik.github.io/aos/) — animações ao rolar a página
-- ⌨️ [Typed.js](https://github.com/mattboldt/typed.js/) — efeito de texto digitado
-- 🧩 [Baffle.js](https://camwiegert.github.io/baffle/) — efeito de texto embaralhado
-- 🌌 [tsParticles](https://particles.js.org/) — fundo animado com partículas
-- 🎭 Font Awesome — ícones
-- 🎨 Devicon — ícones de tecnologias
+-  [Bootstrap](https://getbootstrap.com/) — estilização e componentes responsivos
+-  [AOS](https://michalsnik.github.io/aos/) — animações ao rolar a página
+-  [Typed.js](https://github.com/mattboldt/typed.js/) — efeito de texto digitado
+-  [Baffle.js](https://camwiegert.github.io/baffle/) — efeito de texto embaralhado
+-  [tsParticles](https://particles.js.org/) — fundo animado com partículas
+-  Font Awesome — ícones
+-  Devicon — ícones de tecnologias
 
 ### Backend (simples)
 - Node.js
@@ -55,7 +55,7 @@ O objetivo do projeto é criar uma experiência interativa e moderna, mostrando 
 
 ---
 
-## 🔌 Integração com GitHub API
+##  Integração com GitHub API
 
 O projeto consome a API do GitHub para buscar automaticamente meus repositórios públicos:
 
@@ -66,33 +66,32 @@ O projeto consome a API do GitHub para buscar automaticamente meus repositórios
 
 ---
 
-## 🧩 Funcionalidades principais do sistema
+##  Funcionalidades principais do sistema
 
-### 📌 Renderização dinâmica de projetos
+###  Renderização dinâmica de projetos
 Os projetos são carregados diretamente da API do GitHub e inseridos no DOM via JavaScript.
 
-### 🎠 Carrossel interativo
+###  Carrossel interativo
 Os cards de projetos possuem navegação lateral com botões e centralização automática.
 
-### 👁️ Scroll Spy
+###  Scroll Spy
 Um sistema de detecção de seção ativa baseado em `IntersectionObserver`.
 
-### 🎬 Animações inteligentes
+###  Animações inteligentes
 Elementos aparecem conforme o usuário navega pela página.
 
 ---
 
-## 📸 Demonstração
+##  Demonstração
 
-> (adicione aqui prints do projeto depois se quiser)
 
 ---
 
-## 🛠️ Como rodar localmente
+## 🛠 Como rodar localmente
 
 ```bash
 # clonar o projeto
-git clone https://github.com/SEU_USUARIO/SEU_REPO.git
+git clone https://github.com/HandreyGama/Portifolio.git
 
 # entrar na pasta
 cd seu-repo
