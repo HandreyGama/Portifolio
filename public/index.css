@@ -825,8 +825,8 @@ transition: 0.3s;
         flex-direction: column;
     }
     .sobre-mim-container{
-        height: 200px;
-        width: 310px;
+        height: 250px;
+        width: 350px;
         
     }
     .sobre-mim-container p {
